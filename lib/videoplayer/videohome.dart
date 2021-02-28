@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myflutter_packages/videoplayer/myvideoplayer.dart';
 import 'package:video_player/video_player.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyVideoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

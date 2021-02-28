@@ -39,8 +39,29 @@ class _MyBatteryViewState extends State<MyBatteryView> {
       appBar: AppBar(
         title: const Text('Plugin example app'),
       ),
-      body: Center(
-        child: Text('$_batteryState'),
+      body: Column(
+        children: [
+          Text('$_batteryState'),
+          Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(Icons.arrow_back),
+            Expanded(
+                child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Icon(Icons.account_box),
+                      Flexible(
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                                "  Text HereSome Text Here Text HereSomext HereSome TText HereSome Text HereSome Text HereSome Text HereSome Text HereSome TText HereSome Text HereSome Text HereSome",
+                                maxLines: 1),
+                          ))])),
+            Icon(Icons.arrow_forward),
+          ],
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.battery_unknown),
