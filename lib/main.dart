@@ -6,8 +6,21 @@ import 'package:myflutter_packages/speechtotext/speechscreen.dart';
 import 'package:myflutter_packages/videoplayer/videohome.dart';
 import 'package:myflutter_packages/videoplayercode1/splash_screen.dart';
 import 'package:myflutter_packages/zoom_page.dart';
+import 'package:provider/provider.dart';
+
+import 'batterylevelindicator/batteryview.dart';
+
 void main() => runApp(MyApp());
 
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(title: 'Flutter Demo', home: MyBatteryView(),
+    );
+  }
+}
+
+/*
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,4 +33,4 @@ class MyApp extends StatelessWidget {
       home: ChewieDemo(),
     );
   }
-}
+}*/
