@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myflutter_packages/animation/animationslider.dart';
 import 'package:myflutter_packages/animation/tweenanimation.dart';
+import 'package:myflutter_packages/barcodeandqrcode/scanner.dart';
 import 'package:myflutter_packages/flutterchewie/mychewie.dart';
+import 'package:myflutter_packages/flutterstream/flutterstream.dart';
 import 'package:myflutter_packages/lazy_loading_page.dart';
 import 'package:myflutter_packages/size_page.dart';
 import 'package:myflutter_packages/speechtotext/speechscreen.dart';
@@ -217,6 +219,50 @@ class _MyHomeState extends State<MyHome> {
                       },
                       child: Text(
                         'ZoomPage',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(5.0),
+                    width: MediaQuery.of(context).size.width * .85,
+                    child: FlatButton(
+                      color: Color(0xff89DFC5),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(31),
+                          side: BorderSide(color: Colors.white)),
+                      onPressed: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => MyQRApp()));
+                      },
+                      child: Text(
+                        'MyQRSCANNER',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.all(5.0),
+                    width: MediaQuery.of(context).size.width * .85,
+                    child: FlatButton(
+                      color: Color(0xff89DFC5),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(31),
+                          side: BorderSide(color: Colors.white)),
+                      onPressed: (){
+                        Navigator.push(
+                            context, MaterialPageRoute(builder: (context) => StreamPage()));
+                      },
+                      child: Text(
+                        'StreamPage',
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
